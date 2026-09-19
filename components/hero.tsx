@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 const stats = [
@@ -33,6 +34,17 @@ export function Hero() {
             </Button>
           </div>
         </div>
+        <div className="overflow-hidden rounded-3xl shadow-xl shadow-primary/10">
+          <Image
+            src="/runcrew.png"
+            alt="한강 변에서 함께 달리는 런토피아 크루원들, 낮과 밤 러닝 코스"
+            width={2400}
+            height={1792}
+            className="h-full w-full object-cover"
+            priority
+          />
+        </div>
+
         <div className="grid grid-cols-3 gap-4 rounded-3xl border border-border/60 bg-card p-6 shadow-sm md:max-w-xl">
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col items-center gap-1 text-center">
